@@ -14,7 +14,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #AC9D8E; /* Set your requested background color here */
+            /* Background now transforms from the old body text gold (#E7D27C) into a dark red (#7A1D1D) */
+            background: linear-gradient(135deg, #E7D27C, #7A1D1D); 
             text-align: center;
         }
         .container {
@@ -27,18 +28,23 @@
             font-size: 5.5rem; 
             margin-bottom: 0px;
             letter-spacing: 2px;
-            /* Creates the gradient from #ADEBB3 to #CCCCFF */
+            text-transform: uppercase; 
             background: linear-gradient(45deg, #ADEBB3, #CCCCFF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            /* Pronounced text drop shadow to separate the title from the new background */
+            filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.5));
         }
         p {
             font-family: 'Montserrat', sans-serif; 
             font-size: 1.1rem;
-            color: #E7D27C; /* Set your requested body text color here */
+            /* Body text color swapped with a darkened version of the old background (#AC9D8E -> #4A3E33) */
+            color: #4A3E33; 
             margin-top: 5px;
             letter-spacing: 1px;
-            font-weight: bold; /* Added weight to make the gold text easier to read on this background */
+            font-weight: bold; 
+            /* Added a text drop shadow here too for clean readability */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
         }
     </style>
 </head>
