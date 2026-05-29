@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>heptocc</title>
-    <!-- Imports Bebas Neue and Montserrat from Google Fonts -->
-    <link href="https://googleapis.com" rel="stylesheet">
     <style>
+        @import url('https://googleapis.com');
+
         body {
             margin: 0;
             padding: 0;
@@ -14,7 +14,6 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            /* Background now transforms from the old body text gold (#E7D27C) into a dark red (#7A1D1D) */
             background: linear-gradient(135deg, #E7D27C, #7A1D1D); 
             text-align: center;
         }
@@ -23,28 +22,26 @@
             padding: 20px;
         }
         h1 {
-            font-family: 'Bebas Neue', sans-serif; 
-            font-style: italic; 
-            font-size: 5.5rem; 
+            /* Added Comic Sans MS as the primary backup font right after Bebas Neue */
+            font-family: 'Bebas Neue', 'Comic Sans MS', 'Comic Sans', cursive, sans-serif; 
+            font-size: 6.5rem; 
             margin-bottom: 0px;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase; 
             background: linear-gradient(45deg, #ADEBB3, #CCCCFF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            /* Pronounced text drop shadow to separate the title from the new background */
+            display: inline-block; 
             filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.5));
         }
         p {
             font-family: 'Montserrat', sans-serif; 
             font-size: 1.1rem;
-            /* Body text color swapped with a darkened version of the old background (#AC9D8E -> #4A3E33) */
-            color: #4A3E33; 
-            margin-top: 5px;
-            letter-spacing: 1px;
+            color: #f0f0f5; 
+            margin-top: 8px;
+            letter-spacing: 1.5px;
             font-weight: bold; 
-            /* Added a text drop shadow here too for clean readability */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
