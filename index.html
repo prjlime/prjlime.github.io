@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Developer Hub</title>
+    <title>lime juice [by heptocc]</title>
     <style>
         /* 1. RESET AND MAIN HUB LAYOUT */
         body, html {
@@ -24,7 +24,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, #1a1b23 0%, #050507 100%);
+            background: radial-gradient(circle, #ffffff 0%, #a2e4b8 100%);
             z-index: 99999;
             display: flex;
             justify-content: center;
@@ -43,10 +43,10 @@
             animation: logoScale 3.5s ease-out forwards;
         }
 
-        /* Responsive styling for your graphic file */
+        /* Fixed to exactly 300px per your preference */
         .logo-img {
-            max-width: 500px;
-            width: 80vw;
+            max-width: 300px;
+            width: 75vw;
             height: auto;
             opacity: 0;
             display: block;
@@ -55,27 +55,27 @@
             animation-delay: 0.8s;
         }
 
-        /* The signature horizontal scanning laser line */
+        /* Signature horizontal laser sweep adjusted for 300px frame width */
         .scan-line {
             position: absolute;
             top: 50%;
-            left: -10%;
-            width: 120%;
+            left: -15%;
+            width: 130%;
             height: 4px;
-            background: linear-gradient(90deg, transparent, #00d2ff, #ffffff, #00d2ff, transparent);
-            box-shadow: 0 0 20px #00d2ff, 0 0 40px #00d2ff;
+            background: linear-gradient(90deg, transparent, #adebb3, #ffffff, #98ff98, transparent);
+            box-shadow: 0 0 20px #98ff98, 0 0 40px #adebb3;
             transform: scaleX(0);
             z-index: 2;
             animation: laserSweep 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
             animation-delay: 0.5s;
         }
 
-        /* Subtle environment lens flare glow background */
+        /* Soft ambient environment flare */
         .ambient-glow {
             position: absolute;
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(152, 255, 152, 0.3) 0%, transparent 70%);
             border-radius: 50%;
             filter: blur(20px);
             opacity: 0;
@@ -85,16 +85,16 @@
 
         /* 4. ANIMATION TIMELINES (KEYFRAMES) */
         @keyframes laserSweep {
-            0% { transform: scaleX(0); left: -10%; opacity: 1; }
+            0% { transform: scaleX(0); left: -15%; opacity: 1; }
             40% { transform: scaleX(1); }
-            70% { transform: scaleX(1); left: 110%; opacity: 1; }
-            100% { transform: scaleX(0); left: 120%; opacity: 0; }
+            70% { transform: scaleX(1); left: 115%; opacity: 1; }
+            100% { transform: scaleX(0); left: 125%; opacity: 0; }
         }
 
         @keyframes fadeInReveal {
-            0% { opacity: 0; filter: blur(15px); drop-shadow: 0 0 0px #fff; }
-            50% { opacity: 0.8; filter: blur(3px); filter: drop-shadow(0 0 15px rgba(0,212,255,0.6)); }
-            100% { opacity: 1; filter: blur(0); filter: drop-shadow(0 0 8px rgba(255,255,255,0.3)); }
+            0% { opacity: 0; filter: blur(15px) drop-shadow(0 0 0px #fff); }
+            50% { opacity: 0.8; filter: blur(3px) drop-shadow(0 0 15px rgba(173,235,179,0.6)); }
+            100% { opacity: 1; filter: blur(0) drop-shadow(0 0 8px rgba(255,255,255,0.3)); }
         }
 
         @keyframes logoScale {
@@ -138,7 +138,6 @@
         <div class="ambient-glow"></div>
         <div class="logo-container">
             <div class="scan-line"></div>
-            <!-- YOUR GRAPHIC REFERENCED HERE -->
             <img class="logo-img" src="logo.png" alt="Studio Logo">
         </div>
     </div>
@@ -146,5 +145,11 @@
     <!-- YOUR REAL LANDING PAGE CONTENT (Reveals safely behind it) -->
     <div class="main-content">
         <div class="content-box">
-            <h2>Welcome to My Main Hub</h2>
-            <p>Select a project subfolder directory to explore simulations.</p>
+            <h2>lime juice</h2>
+            <p>a project by</p>
+            <p>[[heptocc]]</p>
+        </div>
+    </div>
+
+</body>
+</html>
