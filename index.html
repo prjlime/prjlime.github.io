@@ -3,163 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔥 FREE ROBUX INFINITE GLITCH 2026 🔥</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    
+    <title>lime juice [by heptocc]</title>
     <style>
-        body {
-            background-color: #1a1a1a;
-            color: #00ff00;
-            font-family: "Comic Sans MS", sans-serif;
-            text-align: center;
-            padding-top: 50px;
+        /* 1. RESET AND MAIN HUB LAYOUT */
+        body, html {
             margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0b0b0d;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
             overflow: hidden;
         }
-        .box {
-            background: #2a2a2a;
-            border: 3px dashed #ff00ff;
-            padding: 30px;
-            display: inline-block;
-            border-radius: 15px;
-            min-width: 320px;
-        }
-        h1 {
-            color: #ffcc00;
-            text-shadow: 2px 2px #ff0000;
-            margin-bottom: 5px;
-        }
-        .subtitle {
-            color: #00ffff;
-            font-weight: bold;
-            margin-bottom: 25px;
-        }
-        
-        /* SLIDER & INPUT STYLING */
-        input[type="range"] {
-            width: 80%;
-            margin: 20px 0;
-            cursor: pointer;
-        }
-        .amount-display {
-            font-size: 24px;
-            color: #ff00ff;
-            font-weight: bold;
-            text-shadow: 1px 1px #fff;
-        }
-        input[type="text"], input[type="password"] {
-            padding: 10px;
-            margin: 10px;
-            font-size: 16px;
-            width: 250px;
-            border-radius: 5px;
-            border: 2px solid #00ff00;
-            background: #111;
-            color: #fff;
-        }
-        
-        /* BUTTON STYLING */
-        button {
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0px 4px #990000;
-            margin-top: 15px;
-        }
-        button:active {
-            box-shadow: 0px 0px #990000;
-            transform: translateY(4px);
-        }
 
-        /* HIDING STEP 2 BY DEFAULT */
-        #step-2 {
-            display: none;
-        }
-
-        /* THE TRAP OVERLAY */
-        #trap-overlay {
-            display: none;
+        /* 2. THE UBISOFT-STYLE INTRO OVERLAY */
+        #splash-screen {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.98);
-            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #1a1b23 0%, #050507 100%);
+            z-index: 99999;
+            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            /* Slide up exit animation */
+            animation: slideUpOut 0.8s cubic-bezier(0.85, 0, 0.15, 1) forwards;
+            animation-delay: 4.2s; 
         }
-        iframe {
-            border: 5px solid #ff00ff;
-            box-shadow: 0px 0px 50px #ff00ff;
-            width: 80%;
-            height: 70%;
+
+        /* 3. CORE LOGO REVEAL & GLITCH EFFECTS */
+        .logo-container {
+            position: relative;
+            text-align: center;
+            /* Scale up entrance simulation */
+            animation: logoScale 3.5s ease-out forwards;
         }
-        .trap-text {
-            color: #00ffff;
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            animation: blink 0.6s infinite;
+
+        /* Responsive styling for your graphic file */
+        .logo-img {
+            max-width: 500px;
+            width: 80vw;
+            height: auto;
+            opacity: 0;
+            display: block;
+            margin: 0 auto;
+            animation: fadeInReveal 1.5s ease-in-out forwards;
+            animation-delay: 0.8s;
         }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
+
+        /* The signature horizontal scanning laser line */
+        .scan-line {
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            width: 120%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #00d2ff, #ffffff, #00d2ff, transparent);
+            box-shadow: 0 0 20px #00d2ff, 0 0 40px #00d2ff;
+            transform: scaleX(0);
+            z-index: 2;
+            animation: laserSweep 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation-delay: 0.5s;
+        }
+
+        /* Subtle environment lens flare glow background */
+        .ambient-glow {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(20px);
+            opacity: 0;
+            animation: glowPulse 3s ease-in-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        /* 4. ANIMATION TIMELINES (KEYFRAMES) */
+        @keyframes laserSweep {
+            0% { transform: scaleX(0); left: -10%; opacity: 1; }
+            40% { transform: scaleX(1); }
+            70% { transform: scaleX(1); left: 110%; opacity: 1; }
+            100% { transform: scaleX(0); left: 120%; opacity: 0; }
+        }
+
+        @keyframes fadeInReveal {
+            0% { opacity: 0; filter: blur(15px); drop-shadow: 0 0 0px #fff; }
+            50% { opacity: 0.8; filter: blur(3px); filter: drop-shadow(0 0 15px rgba(0,212,255,0.6)); }
+            100% { opacity: 1; filter: blur(0); filter: drop-shadow(0 0 8px rgba(255,255,255,0.3)); }
+        }
+
+        @keyframes logoScale {
+            0% { transform: scale(0.95); }
+            100% { transform: scale(1.03); }
+        }
+
+        @keyframes glowPulse {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.3; transform: scale(1); }
+        }
+
+        @keyframes slideUpOut {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); visibility: hidden; }
+        }
+
+        /* 5. ACTUAL MAIN LANDING PAGE STYLING */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0f1015;
+        }
+        .content-box {
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
         }
     </style>
 </head>
 <body>
 
-    <h1>🔥 FREE ROBUX INFINITE GLITCH 2026 🔥</h1>
-    <div class="subtitle">100% REAL NO HUMAN VERIFICATION LEGIT NO VIRUS</div>
-
-    <div id="step-1" class="box">
-        <h3>STEP 1: SELECT ROBUX AMOUNT</h3>
-        <input type="range" id="robux-slider" min="400" max="50000" step="400" value="10000" oninput="updateAmount(this.value)">
-        <div class="amount-display"><span id="amount-val">10,000</span> R$</div>
-        <br>
-        <button onclick="goToStep2()">NEXT</button>
+    <!-- THE INTRO SCREEN OVERLAY -->
+    <div id="splash-screen">
+        <div class="ambient-glow"></div>
+        <div class="logo-container">
+            <div class="scan-line"></div>
+            <!-- YOUR GRAPHIC REFERENCED HERE -->
+            <img class="logo-img" src="logo.png" alt="Studio Logo">
+        </div>
     </div>
 
-    <div id="step-2" class="box">
-        <h3>STEP 2: LOG IN TO SYNC R$</h3>
-        <p style="color: #ffcc00; font-size: 14px;">Connecting to secure server...</p>
-        <input type="text" placeholder="Roblox Username" onkeydown="triggerTrap()">
-        <br>
-        <input type="password" placeholder="Password" onkeydown="triggerTrap()">
-    </div>
-
-    <div id="trap-overlay">
-        <div class="trap-text">❌ USER VERIFICATION FAILED: CONNECTING TO ALTERNATE SERVER ❌</div>
-        <iframe id="rick-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <script>
-        function updateAmount(val) {
-            document.getElementById('amount-val').innerText = Number(val).toLocaleString();
-        }
-
-        function goToStep2() {
-            document.getElementById('step-1').style.display = 'none';
-            document.getElementById('step-2').style.display = 'inline-block';
-        }
-
-        function triggerTrap() {
-            const overlay = document.getElementById('trap-overlay');
-            overlay.style.display = 'flex';
-
-            const video = document.getElementById('rick-video');
-            // Updated video ID to BoonMoon's Roblox Recreation
-            video.src = "https://www.youtube.com/embed/3HtCQCFk1W0?autoplay=1";
-        }
-    </script>
-
-</body>
-</html>
+    <!-- YOUR REAL LANDING PAGE CONTENT (Reveals safely behind it) -->
+    <div class="main-content">
+        <div class="content-box">
+            <h2>lime juice</h2>
+            <p>a world of nothing</p>
