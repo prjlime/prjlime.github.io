@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FREE ROBUX GENERATOR 2026!!!</title>
+    <title>🔥 FREE ROBUX INFINITE GLITCH 2026 🔥</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <style>
         body {
             background-color: #1a1a1a;
@@ -12,7 +14,7 @@
             text-align: center;
             padding-top: 50px;
             margin: 0;
-            overflow: hidden; /* Prevents scrolling if the trap is active */
+            overflow: hidden;
         }
         .box {
             background: #2a2a2a;
@@ -20,44 +22,91 @@
             padding: 30px;
             display: inline-block;
             border-radius: 15px;
-        }
-        input {
-            padding: 10px;
-            margin: 10px;
-            font-size: 16px;
-            width: 250px;
+            min-width: 320px;
         }
         h1 {
             color: #ffcc00;
             text-shadow: 2px 2px #ff0000;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #00ffff;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        
+        /* SLIDER & INPUT STYLING */
+        input[type="range"] {
+            width: 80%;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        .amount-display {
+            font-size: 24px;
+            color: #ff00ff;
+            font-weight: bold;
+            text-shadow: 1px 1px #fff;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            width: 250px;
+            border-radius: 5px;
+            border: 2px solid #00ff00;
+            background: #111;
+            color: #fff;
+        }
+        
+        /* BUTTON STYLING */
+        button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px #990000;
+            margin-top: 15px;
+        }
+        button:active {
+            box-shadow: 0px 0px #990000;
+            transform: translateY(4px);
         }
 
-        /* THE TRAP OVERLAY (Hidden by default) */
+        /* HIDING STEP 2 BY DEFAULT */
+        #step-2 {
+            display: none;
+        }
+
+        /* THE TRAP OVERLAY */
         #trap-overlay {
-            display: none; /* Starts invisible */
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-color: rgba(0, 0, 0, 0.95); /* Blackout background */
-            z-index: 9999; /* Puts it on top of absolutely everything */
+            background-color: rgba(0, 0, 0, 0.98);
+            z-index: 9999;
             justify-content: center;
             align-items: center;
             flex-direction: column;
         }
         iframe {
-            border: 5px solid #ff0000;
-            box-shadow: 0px 0px 50px #ff0000;
+            border: 5px solid #ff00ff;
+            box-shadow: 0px 0px 50px #ff00ff;
             width: 80%;
             height: 70%;
         }
         .trap-text {
-            color: #ff0000;
-            font-size: 30px;
+            color: #00ffff;
+            font-size: 28px;
             font-weight: bold;
             margin-bottom: 20px;
-            animation: blink 0.5s infinite;
+            animation: blink 0.6s infinite;
         }
         @keyframes blink {
             0% { opacity: 1; }
@@ -69,28 +118,46 @@
 <body>
 
     <h1>🔥 FREE ROBUX INFINITE GLITCH 2026 🔥</h1>
-    <p>100% REAL NO HUMAN VERIFICATION LEGIT NO VIRUS</p>
+    <div class="subtitle">100% REAL NO HUMAN VERIFICATION LEGIT NO VIRUS</div>
 
-    <div class="box">
-        <h3>Log In to Sync Your Account:</h3>
+    <div id="step-1" class="box">
+        <h3>STEP 1: SELECT ROBUX AMOUNT</h3>
+        <input type="range" id="robux-slider" min="400" max="50000" step="400" value="10000" oninput="updateAmount(this.value)">
+        <div class="amount-display"><span id="amount-val">10,000</span> R$</div>
+        <br>
+        <button onclick="goToStep2()">NEXT</button>
+    </div>
+
+    <div id="step-2" class="box">
+        <h3>STEP 2: LOG IN TO SYNC R$</h3>
+        <p style="color: #ffcc00; font-size: 14px;">Connecting to secure server...</p>
         <input type="text" placeholder="Roblox Username" onkeydown="triggerTrap()">
         <br>
         <input type="password" placeholder="Password" onkeydown="triggerTrap()">
     </div>
 
     <div id="trap-overlay">
-        <div class="trap-text">❌ USER VERIFICATION FAILED: YOU GOT RICKROLLED ❌</div>
+        <div class="trap-text">❌ USER VERIFICATION FAILED: CONNECTING TO ALTERNATE SERVER ❌</div>
         <iframe id="rick-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <script>
+        // Updates the slider number dynamically
+        function updateAmount(val) {
+            document.getElementById('amount-val').innerText = Number(val).toLocaleString();
+        }
+
+        // Switches from Slider to Login page
+        function goToStep2() {
+            document.getElementById('step-1').style.display = 'none';
+            document.getElementById('step-2').style.display = 'inline-block';
+        }
+
+        // Activates the surprise screen
         function triggerTrap() {
-            // 1. Show the giant overlay layout
             const overlay = document.getElementById('trap-overlay');
             overlay.style.display = 'flex';
 
-            // 2. Inject the YouTube link with autoplay=1 right as they type
-            // Using embed format + autoplay makes it run instantly
             const video = document.getElementById('rick-video');
             video.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
         }
