@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lime juice [by heptocc]</title>
+    <!-- Master Directory Title -->
+    <title>prj lime | main directory</title>
     <style>
         /* 1. RESET AND MAIN HUB LAYOUT */
         body, html {
@@ -12,38 +13,35 @@
             width: 100%;
             height: 100%;
             background-color: #0b0b0d;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             color: #ffffff;
             overflow: hidden;
         }
 
-        /* 2. THE UBISOFT-STYLE INTRO OVERLAY */
+        /* 2. THE OVERLAY SCREEN */
         #splash-screen {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, #ffffff 0%, #a2e4b8 100%);
+            background: #0b0b0d;
             z-index: 99999;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            /* Slide up exit animation */
             animation: slideUpOut 0.8s cubic-bezier(0.85, 0, 0.15, 1) forwards;
             animation-delay: 4.2s; 
         }
 
-        /* 3. CORE LOGO REVEAL & GLITCH EFFECTS */
+        /* 3. CORE LOGO REVEAL & LASER EFFECT */
         .logo-container {
             position: relative;
             text-align: center;
-            /* Scale up entrance simulation */
             animation: logoScale 3.5s ease-out forwards;
         }
 
-        /* Fixed to exactly 300px per your preference */
         .logo-img {
             max-width: 300px;
             width: 75vw;
@@ -55,27 +53,25 @@
             animation-delay: 0.8s;
         }
 
-        /* Signature horizontal laser sweep adjusted for 300px frame width */
         .scan-line {
             position: absolute;
             top: 50%;
             left: -15%;
             width: 130%;
             height: 4px;
-            background: linear-gradient(90deg, transparent, #adebb3, #ffffff, #98ff98, transparent);
-            box-shadow: 0 0 20px #98ff98, 0 0 40px #adebb3;
+            background: linear-gradient(90deg, transparent, #adebb3, #ffffff, #9bf00b, transparent);
+            box-shadow: 0 0 20px #9bf00b, 0 0 40px #adebb3;
             transform: scaleX(0);
             z-index: 2;
             animation: laserSweep 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
             animation-delay: 0.5s;
         }
 
-        /* Soft ambient environment flare */
         .ambient-glow {
             position: absolute;
             width: 250px;
             height: 250px;
-            background: radial-gradient(circle, rgba(152, 255, 152, 0.3) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(155, 240, 11, 0.2) 0%, transparent 70%);
             border-radius: 50%;
             filter: blur(20px);
             opacity: 0;
@@ -93,8 +89,8 @@
 
         @keyframes fadeInReveal {
             0% { opacity: 0; filter: blur(15px) drop-shadow(0 0 0px #fff); }
-            50% { opacity: 0.8; filter: blur(3px) drop-shadow(0 0 15px rgba(173,235,179,0.6)); }
-            100% { opacity: 1; filter: blur(0) drop-shadow(0 0 8px rgba(255,255,255,0.3)); }
+            50% { opacity: 0.8; filter: blur(3px) drop-shadow(0 0 15px rgba(155,240,11,0.4)); }
+            100% { opacity: 1; filter: blur(0) drop-shadow(0 0 8px rgba(255,255,255,0.2)); }
         }
 
         @keyframes logoScale {
@@ -119,35 +115,110 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #0f1015;
+            background-color: #0b0b0d;
         }
         .content-box {
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(10px);
-            border-radius: 12px;
+            border-radius: 4px;
+            max-width: 500px;
+            width: 90%;
         }
+        
+        /* Master Studio Branding Typography */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: normal;
+            letter-spacing: 6px;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+        .founder-tag {
+            font-size: 0.9rem;
+            color: #666666;
+            margin: 0 0 35px 0;
+            letter-spacing: 2px;
+        }
+        .founder-name {
+            color: #9bf00b;
+            font-weight: bold;
+        }
+
+        /* Parallel Layout Branching Grid */
+        .branch-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+            border-top: 1px dashed rgba(255,255,255,0.1);
+            padding-top: 30px;
+        }
+        .branch-card {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.03);
+            background: rgba(255,255,255,0.01);
+            border-radius: 4px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        /* Subtle interactive hover depth */
+        .branch-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(155, 240, 11, 0.3);
+            transform: translateY(-2px);
+        }
+        .branch-title {
+            font-size: 1.1rem;
+            margin: 0 0 8px 0;
+            letter-spacing: 2px;
+        }
+        .branch-desc {
+            font-size: 0.8rem;
+            color: #555555;
+            margin: 0;
+            line-height: 1.4;
+        }
+        .juice-highlight:hover .branch-title { color: #9bf00b; }
+        .clam-highlight:hover .branch-title { color: #adebb3; }
     </style>
 </head>
 <body>
 
-    <!-- THE INTRO SCREEN OVERLAY -->
+    <!-- THE INTRO OVERLAY SCREEN -->
     <div id="splash-screen">
         <div class="ambient-glow"></div>
         <div class="logo-container">
             <div class="scan-line"></div>
-            <img class="logo-img" src="logo.png" alt="Studio Logo">
+            <!-- Features your skull mask logo -->
+            <img class="logo-img" src="logo.png" alt="prj lime logo">
         </div>
     </div>
 
-    <!-- YOUR REAL LANDING PAGE CONTENT (Reveals safely behind it) -->
+    <!-- MAIN DIRECTORY SCREEN -->
     <div class="main-content">
         <div class="content-box">
-            <h2>lime juice</h2>
-            <p>a project by</p>
-            <p>[[heptocc]]</p>
+            <h1>prj lime</h1>
+            <div class="founder-tag">established by <span class="founder-name">[wazooks]</span></div>
+            
+            <!-- Parallel Brand Branches Layout -->
+            <div class="branch-container">
+                <!-- Left Branch: Performance Outlet -->
+                <a href="#juice-hub" class="branch-card juice-highlight">
+                    <div class="branch-title">lime juice</div>
+                    <div class="branch-desc">active project outlet / deployment node</div>
+                </a>
+                
+                <!-- Right Branch: Asset Imprint -->
+                <a href="#clamshell-hub" class="branch-card clam-highlight">
+                    <div class="branch-title">clamshell</div>
+                    <div class="branch-desc">imprint node / operational publishing ledger</div>
+                </a>
+            </div>
         </div>
     </div>
 
