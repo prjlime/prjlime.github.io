@@ -123,8 +123,8 @@
             background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(10px);
             border-radius: 4px;
-            max-width: 700px; /* Comfortably fits all three cards */
-            width: 90%;
+            max-width: 900px;
+            width: 95%;
         }
         
         h1 {
@@ -149,6 +149,7 @@
         .branch-container {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 20px;
             margin-top: 20px;
             border-top: 1px dashed rgba(255,255,255,0.1);
@@ -156,7 +157,8 @@
         }
         .branch-card {
             flex: 1;
-            min-width: 140px;
+            min-width: 180px;
+            max-width: 210px;
             padding: 20px;
             border: 1px solid rgba(255,255,255,0.03);
             background: rgba(255,255,255,0.01);
@@ -186,9 +188,12 @@
         .clam-highlight:hover { border-color: rgba(173, 235, 179, 0.3); }
         .clam-highlight:hover .branch-title { color: #adebb3; }
 
-        /* J.A.R.V.I.S Custom Hover Styling */
         .jarvis-highlight:hover { border-color: rgba(0, 212, 255, 0.3); }
         .jarvis-highlight:hover .branch-title { color: #00d4ff; }
+
+        /* Custom Hover Highlights for the Falling Rocks physics module */
+        .rocks-highlight:hover { border-color: rgba(235, 173, 220, 0.3); }
+        .rocks-highlight:hover .branch-title { color: #ebaddc; }
     </style>
 </head>
 <body>
@@ -209,22 +214,28 @@
             <div class="founder-tag">established and created by <span class="founder-name">[[wazooks]]</span></div>
             
             <div class="branch-container">
-                <!-- Left Branch: Linked to your subfolder /limejuice/ -->
+                <!-- Left Branch: /limejuice/ -->
                 <a href="./limejuice/" class="branch-card juice-highlight">
                     <div class="branch-title">lime juice</div>
                     <div class="branch-desc">artistic and programming outlet</div>
                 </a>
                 
-                <!-- Middle Branch: Linked to your subfolder /clamshell/ -->
+                <!-- Middle-Left Branch: /clamshell/ -->
                 <a href="./clamshell/" class="branch-card clam-highlight">
                     <div class="branch-title">clamshell</div>
                     <div class="branch-desc">musical subsidiary</div>
                 </a>
 
-                <!-- Corrected Right Branch: Case-sensitive path to /J.A.R.V.I.S/ -->
+                <!-- Middle-Right Branch: Case-sensitive /J.A.R.V.I.S/ -->
                 <a href="./J.A.R.V.I.S/" class="branch-card jarvis-highlight">
                     <div class="branch-title">J.A.R.V.I.S</div>
                     <div class="branch-desc">system automation interface</div>
+                </a>
+
+                <!-- Right Branch: Case-sensitive /fallingrocks/ -->
+                <a href="./fallingrocks/" class="branch-card rocks-highlight">
+                    <div class="branch-title">fallingrocks</div>
+                    <div class="branch-desc">falling particle simulation</div>
                 </a>
             </div>
         </div>
